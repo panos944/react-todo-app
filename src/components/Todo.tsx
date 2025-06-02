@@ -6,12 +6,6 @@ import type { TodoProps, Action } from "../types";
 
 const todoReducer = (state: TodoProps[], action: Action): TodoProps[] => {
   switch(action.type) {
-    // case "ADD":
-    //     const newTodo: TodoProps = {
-    //       id: Date.now(),
-    //       text: action.payload,
-    //     }
-    //     return [...state, newTodo]
     case "ADD":
       return [
         ...state, 
@@ -32,7 +26,7 @@ const todoReducer = (state: TodoProps[], action: Action): TodoProps[] => {
         : todo
       );
     
-    case "COMPLETE":
+    case "COMPLETED":
       return state.map(todo =>
         todo.id === action.payload
         ? {...todo,  completed:!todo.completed}

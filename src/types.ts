@@ -8,7 +8,7 @@ export type Action =
   | {type:"ADD"; payload: string}
   | {type:"DELETE", payload: number}
   | {type:"EDIT", payload: {id: number; newText: string}}
-  | {type:"COMPLETE", payload: number}
+  | {type:"COMPLETED", payload: number}
 
 export type TodoListProps = {
   todos: TodoProps[];
