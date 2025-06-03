@@ -1,8 +1,13 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 import type { TodoProps, Action } from "../types";
 
+
+const getInitialTodos = () => {
+  const stored = localStorage.getItem("todos");
+  return stored ? JSON.parse(stored) : [];
+}
 
 const todoReducer = (state: TodoProps[], action: Action): TodoProps[] => {
   switch(action.type) {
@@ -40,8 +45,12 @@ const todoReducer = (state: TodoProps[], action: Action): TodoProps[] => {
 
 
 const ToDo = () => {
-  const [todos, dispatch] = useReducer(todoReducer, []);
-  console.log(todos);
+
+  const [todos, dispatch] = useReducer(todoReducer, [], getInitialTodos);
+  
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
 
   return(
     <>

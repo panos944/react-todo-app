@@ -28,7 +28,7 @@ const TodoList = ({todos, dispatch}:TodoListProps) => {
   }
 
   const handleToggle = (id:number) => () => {
-    dispatch({type:"COMPLETE", payload: id})
+    dispatch({type:"COMPLETED", payload: id})
   }
 
   return (
