@@ -9,6 +9,7 @@ export type Action =
   | {type:"DELETE", payload: number}
   | {type:"EDIT", payload: {id: number; newText: string}}
   | {type:"COMPLETED", payload: number}
+  | {type: "CLEAR_ALL"}
 
 export type TodoListProps = {
   todos: TodoProps[];
