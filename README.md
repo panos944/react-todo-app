@@ -91,12 +91,12 @@ npm run dev
 
 ### How to Use
 
- - Add a new task: Type your task in the input field at the top and click the "Add" button.
+1. Add a new task: Type your task in the input field at the top and click the "Add" button.
 
- - Edit a task: Click the "Edit" icon (pencil) next to a task. The task will become an editable input field. Type your changes and click the "Save" icon (disk) to confirm, or the "X" icon    to cancel.
+2. Edit a task: Click the "Edit" icon (pencil) next to a task. The task will become an editable input field. Type your changes and click the "Save" icon (disk) to confirm, or the "X" icon    to cancel.
 
- - Mark a task as completed/active: Click the square icon next to a task. It will change to a checked square and the task will be styled as completed (e.g., line-through).
+3. Mark a task as completed/active: Click the square icon next to a task. It will change to a checked square and the task will be styled as completed (e.g., line-through).
 
- - Delete a task: Click the "Trash" icon next to a task.
+4. Delete a task: Click the "Trash" icon next to a task.
 
- - Clear all tasks: If there are tasks in your list, a "Clear All" button will appear at the bottom. Click it to remove all tasks.
+5. Clear all tasks: If there are tasks in your list, a "Clear All" button will appear at the bottom. Click it to remove all tasks.
