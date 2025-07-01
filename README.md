@@ -1,54 +1,86 @@
-# React + TypeScript + Vite
+# To-Do List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and intuitive To-Do List application built with React and TypeScript, leveraging `useReducer` for state management and `localStorage` for persistence.
 
-Currently, two official plugins are available:
+Project Structure
+The project follows a standard React application structure:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+.
+├── public/                 # Static assets (e.g., index.html)
+├── src/
+│   ├── components/         # Reusable UI components
+│   │   ├── TodoForm.tsx    # Component for adding new tasks
+│   │   └── TodoList.tsx    # Component for displaying and managing tasks
+│   ├── types.ts            # TypeScript type definitions
+│   └── App.tsx             # Main application component (or similar, not provided but implied)
+│   └── main.tsx            # Entry point of the React application
+│   └── ToDo.tsx            # Main ToDo logic and component (where useReducer and localStorage are used)
+├── .gitignore              # Specifies intentionally untracked files to ignore
+├── package.json            # Project dependencies and scripts
+├── package-lock.json       # Records the exact versions of dependencies
+├── README.md               # This file
+├── tsconfig.json           # TypeScript compiler configuration
+├── tsconfig.app.json       # TypeScript configuration specific to the application
+├── tsconfig.node.json      # TypeScript configuration specific to Node.js environments
+└── vite.config.ts          # Vite build tool configuration
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Add Tasks:** Easily add new tasks to your list.
+* **Delete Tasks:** Remove tasks you no longer need.
+* **Edit Tasks:** Modify existing task descriptions.
+* **Mark as Completed:** Toggle the completion status of tasks.
+* **Clear All:** Delete all tasks from the list with a single click.
+* **Task Counters:** View the total number of tasks, active tasks, and completed tasks.
+* **Persistent Storage:** Your tasks are saved locally in your browser, so they remain even after closing and reopening the application.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies Used
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* **React:** A JavaScript library for building user interfaces.
+* **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
+* **`useReducer` Hook:** For robust and predictable state management.
+* **`useState` Hook:** For managing component-level state (e.g., input fields).
+* **`useEffect` Hook:** For side effects, primarily for `localStorage` persistence.
+* **Tailwind CSS (Implicit):** The `className` attributes suggest Tailwind CSS is used for styling, providing a utility-first CSS framework.
+* **Lucide React Icons:** For clear and concise icons (Trash2, Edit, Save, Square, X, CheckSquare).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Follow these steps to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+You need to have Node.js and npm (Node Package Manager) or Yarn installed on your system.
+
+* [Node.js](https://nodejs.org/) (includes npm)
+* [Yarn](https://yarnpkg.com/) (optional, alternative to npm)
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone <your-repository-url>
+    cd <your-project-directory>
+    ```
+
+    (Replace `<your-repository-url>` and `<your-project-directory>` with your actual repository URL and the desired directory name.)
+
+2.  **Install dependencies:**
+
+    Using npm:
+    ```bash
+    npm install
+    ```
+    Or using Yarn:
+    ```bash
+    yarn install
+    ```
+
+### Running the Application
+
+To start the development server:
+
+Using npm:
+```bash
+npm run dev
