@@ -3,8 +3,10 @@
 A simple and intuitive To-Do List application built with React and TypeScript, leveraging `useReducer` for state management and `localStorage` for persistence.
 
 Project Structure
+
 The project follows a standard React application structure:
 
+```text
 .
 ├── public/                 # Static assets (e.g., index.html)
 ├── src/
@@ -23,6 +25,7 @@ The project follows a standard React application structure:
 ├── tsconfig.app.json       # TypeScript configuration specific to the application
 ├── tsconfig.node.json      # TypeScript configuration specific to Node.js environments
 └── vite.config.ts          # Vite build tool configuration
+```
 
 ## Features
 
